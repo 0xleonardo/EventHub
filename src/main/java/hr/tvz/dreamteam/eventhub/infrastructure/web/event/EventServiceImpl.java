@@ -13,6 +13,8 @@ import hr.tvz.dreamteam.eventhub.infrastructure.web.event.update.event_type.Upda
 import hr.tvz.dreamteam.eventhub.infrastructure.web.transactions.model.EventDTO;
 import hr.tvz.dreamteam.eventhub.infrastructure.security.user.UserRepository;
 import hr.tvz.dreamteam.eventhub.infrastructure.web.transactions.model.OrganizerUserDTO;
+import hr.tvz.dreamteam.eventhub.infrastructure.web.transactions.model.TicketDTO;
+import hr.tvz.dreamteam.eventhub.infrastructure.web.tickets.TicketRepository;
 import lombok.AllArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
@@ -31,6 +33,9 @@ import java.util.UUID;
 public class EventServiceImpl implements EventService {
 
     private EventRepository eventRepository;
+
+    private TicketRepository ticketRepository;
+
     private EventTypeRepository eventTypeRepository;
     private UserRepository userRepository;
 
@@ -46,6 +51,11 @@ public class EventServiceImpl implements EventService {
     @Override
     public Page<EventDTO> getAllActiveEventsByPriority(int page, int size) {
         return eventRepository.findActiveEventsByPriority(EventStatus.ACTIVE, PageRequest.of(page, size)).map(this::mapToEventDTO);
+    }
+
+    @Override
+    public Page<EventDTO> findEventsWithMostTicketsSold(int page, int size) {
+        return eventRepository.findEventsWithMostTicketsSold(EventStatus.ACTIVE, PageRequest.of(page, size)).map(this::mapToEventDTO);
     }
 
     @Override
@@ -169,12 +179,16 @@ public class EventServiceImpl implements EventService {
 
     private EventDTO mapToEventDTO(Event event) {
         return new EventDTO(event.getId(), event.getName(), event.getDescription(), event.getImage(),
-                event.getDatetimeFrom(), event.getDatetimeTo(),
-                event.getEventType().getName(), event.getLocation(), event.getStatus());
+                event.getDatetimeFrom(), event.getDatetimeTo(), mapToOrganizerDTO(event.getUser()),
+                event.getEventType().getName(), mapToTicketDTO(event.getId()), event.getLocation(), event.getStatus());
     }
 
     private OrganizerUserDTO mapToOrganizerDTO(User user) {
         return new OrganizerUserDTO(user.getId(), user.getUsername(), user.getEmail(), user.getAbout());
+    }
+
+    private List<TicketDTO> mapToTicketDTO(UUID eventId) {
+        return ticketRepository.getAllGroupedByForEventId(eventId);
     }
 
     private User getCurrentUser() {
