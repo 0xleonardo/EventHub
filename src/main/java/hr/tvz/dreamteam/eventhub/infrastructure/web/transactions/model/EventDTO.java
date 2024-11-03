@@ -10,5 +10,7 @@ import java.util.UUID;
 public record EventDTO(UUID id, String name, String description,
                        String image,
                        LocalDateTime datetimeFrom, LocalDateTime datetimeTo,
-                       String eventType, Location location, EventStatus status) {
+                       OrganizerUserDTO organizer, String eventType,
+                       List<TicketDTO> tickets, Location location, EventStatus status) {
 }
+

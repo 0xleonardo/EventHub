@@ -47,6 +47,12 @@ public class EventController {
         return eventService.getAllActiveEventsByPriority(page, size);
     }
 
+    @GetMapping("/events/most-sold")
+    public Page<EventDTO> findEventsWithMostTicketsSold(@RequestParam(name = "page", defaultValue = "0") int page,
+                                                        @RequestParam(name = "size", defaultValue = "6") int size) {
+        return eventService.findEventsWithMostTicketsSold(page, size);
+    }
+
     @PostMapping("/event")
     public ResponseEntity<EventDTO> getEventById(@RequestBody EventByIdRequest eventByIdRequest) {
         return eventService.getEventById(eventByIdRequest.eventId())
@@ -110,8 +116,8 @@ public class EventController {
 
     @Secured("ROLE_ADMIN")
     @PostMapping("/event/delete")
-    public ResponseEntity<Object> deleteEvent(@RequestBody @Valid   DeleteEventRequest request) {
+    public ResponseEntity<Object> deleteEvent(@RequestBody @Valid DeleteEventRequest request) {
         return eventService.deleteEvent(request);
     }
-    
+
 }

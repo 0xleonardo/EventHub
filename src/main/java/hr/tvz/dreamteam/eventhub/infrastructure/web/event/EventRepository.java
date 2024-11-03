@@ -23,6 +23,14 @@ import java.util.UUID;
 
 public interface EventRepository extends JpaRepository<Event, UUID> {
 
+    @Query("SELECT e FROM Event e " +
+            "JOIN Transaction t ON e.id = t.event.id " +
+            "JOIN Ticket tk ON tk.transaction.id = t.id " +
+            "WHERE e.status = :eventStatus AND tk.status = 'SOLD' " +
+            "GROUP BY e.id " +
+            "ORDER BY COUNT(tk.id) DESC")
+    Page<Event> findEventsWithMostTicketsSold(EventStatus eventStatus, Pageable pageable);
+
     @Query(value = "SELECT e FROM Event e " +
             "WHERE e.status = :eventStatus " +
             "order by e.priority desc")
@@ -34,6 +42,9 @@ public interface EventRepository extends JpaRepository<Event, UUID> {
 
     @Query(value = "SELECT DISTINCT e " +
             "FROM Event e " +
+            "JOIN Transaction tr ON e.id = tr.event.id " +
+            "JOIN Ticket t ON tr.id = t.transaction.id " +
+            "WHERE tr.user.id = :userId " +
             "ORDER BY e.datetimeFrom DESC")
     Page<Event> findEventsWithUserTickets(UUID userId, Pageable pageable);
 
@@ -74,6 +85,16 @@ public interface EventRepository extends JpaRepository<Event, UUID> {
     @Query("UPDATE Event e SET e.status = hr.tvz.dreamteam.eventhub.infrastructure.domain.EventStatus.ENDED WHERE e.datetimeTo < CURRENT_TIMESTAMP")
     void makePastEventEnded();
 
+    @Modifying
+    @Transactional
+    @Query("UPDATE Ticket t " +
+            "SET t.status = hr.tvz.dreamteam.eventhub.infrastructure.domain.TicketStatus.EXPIRED " +
+            "WHERE t.event.id IN (" +
+            "    SELECT e.id FROM Event e " +
+            "    WHERE e.datetimeTo < CURRENT_TIMESTAMP)")
+    void expirePastEventTickets();
 
     Long countAllByStatus(EventStatus status);
 }
+
+

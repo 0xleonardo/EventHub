@@ -22,6 +22,8 @@ public interface EventService {
 
     Page<EventDTO> getAllActiveEventsByPriority(int page, int size);
 
+    Page<EventDTO> findEventsWithMostTicketsSold(int page, int size);
+
     Page<EventType> getAllEventTypes(int page, int size);
 
     Optional<EventDTO> getEventById(UUID eventId);
