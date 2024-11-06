@@ -1,4 +1,4 @@
-package hr.tvz.dreamteam.eventhub.infrastructure.security.config;
+package hr.tvz.dreamteam.eventhub.infrastructure.config;
 
 
 import io.swagger.v3.oas.models.Components;

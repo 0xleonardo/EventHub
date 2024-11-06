@@ -1,4 +1,4 @@
-package hr.tvz.dreamteam.eventhub.infrastructure.security.config;
+package hr.tvz.dreamteam.eventhub.infrastructure.config;
 
 import hr.tvz.dreamteam.eventhub.infrastructure.security.jwt.JwtAuthenticationEntryPoint;
 import hr.tvz.dreamteam.eventhub.infrastructure.security.jwt.JwtFilter;
@@ -10,6 +10,7 @@ import org.springframework.security.config.annotation.method.configuration.Enabl
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityCustomizer;
+import org.springframework.security.config.annotation.web.configurers.HeadersConfigurer;
 import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
@@ -52,24 +53,24 @@ public class SecurityConfiguration {
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity httpSecurity) throws Exception {
         httpSecurity
-                .headers().frameOptions().disable()
-                .and()
-                .csrf()
-                .ignoringRequestMatchers(AntPathRequestMatcher.antMatcher("/h2-console/**"))
-                .disable()
-                .authorizeHttpRequests()
-                .requestMatchers("/api/login", "/api/register", "/api/user")
-                .permitAll()
-                .requestMatchers(AntPathRequestMatcher.antMatcher("/h2-console/**")).permitAll()
-                .requestMatchers("/error").anonymous()
-                .requestMatchers(SWAGGER_WHITELIST).permitAll()
-                .anyRequest().authenticated()
-                .and()
-                .exceptionHandling()
-                .authenticationEntryPoint(jwtAuthenticationEntryPoint)
-                .and()
-                .sessionManagement()
-                .sessionCreationPolicy(SessionCreationPolicy.STATELESS);
+                .headers(headers -> headers.frameOptions(HeadersConfigurer.FrameOptionsConfig::disable))
+                .csrf(csrf -> csrf
+                        .ignoringRequestMatchers("/h2-console/**")
+                        .disable()
+                )
+                .authorizeHttpRequests(auth -> auth
+                        .requestMatchers("/api/login", "/api/register", "/api/user").permitAll()
+                        .requestMatchers("/h2-console/**").permitAll()
+                        .requestMatchers("/error").anonymous()
+                        .requestMatchers(SWAGGER_WHITELIST).permitAll()
+                        .anyRequest().authenticated()
+                )
+                .exceptionHandling(exception -> exception
+                        .authenticationEntryPoint(jwtAuthenticationEntryPoint)
+                )
+                .sessionManagement(session -> session
+                        .sessionCreationPolicy(SessionCreationPolicy.STATELESS)
+                );
 
         httpSecurity.addFilterBefore(jwtFilter, UsernamePasswordAuthenticationFilter.class);
 
