@@ -26,6 +26,6 @@ public class Authority implements Serializable {
 
     @OneToMany(mappedBy = "authority")
     private List<User> users;
-    
+
 
 }

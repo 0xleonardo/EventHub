@@ -14,6 +14,10 @@ public interface UserService {
 
     ResponseEntity<Object> updateUser(UserUpdateRequest updateRequest);
 
+    Optional<PublicOrganizerDTO> getOrganizerProfile(String username);
+
     Page<UserDTO> getAllUsers(String searchQuery, AuthorityType authority, int page, int size);
+
+    ResponseEntity<Object> promoteToOrganizer(UserToOrganizerDTO request);
 
 }

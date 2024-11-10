@@ -34,6 +34,13 @@ public class UserController {
         return userService.updateUser(updateRequest);
     }
 
+    @PostMapping("/user")
+    public ResponseEntity<PublicOrganizerDTO> getOrganizerProfile(@RequestBody PublicOrganizerProfileRequest request) {
+        return userService.getOrganizerProfile(request.username())
+                .map(ResponseEntity::ok)
+                .orElse(ResponseEntity.badRequest().build());
+    }
+
     @Secured({"ROLE_ADMIN"})
     @GetMapping("/users")
     public Page<UserDTO> getAllUsers(@RequestParam(name = "page", defaultValue = "0") int page,
@@ -41,6 +48,12 @@ public class UserController {
                                      @RequestParam(required = false) String searchQuery,
                                      @RequestParam(required = false, name = "authority") AuthorityType authority) {
         return userService.getAllUsers(searchQuery, authority, page, size);
+    }
+
+    @Secured({"ROLE_ADMIN"})
+    @PostMapping("/user-to-organizer")
+    public ResponseEntity<Object> makeOrganizer(@RequestBody @Valid UserToOrganizerDTO request) {
+        return userService.promoteToOrganizer(request);
     }
 
 }
