@@ -1,0 +1,37 @@
+.footer-page {
+    min-height: 120vh;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    background-color: #f1f1f1;
+}
+
+.footer-page .section-one {
+    min-height: 40vh;
+    background-image: url("/src/assets/pattern.png");
+    background-size: cover;
+    background-repeat: repeat;
+    display: flex;
+    background-color: #00192f;
+}
+
+.footer-page .heading, .footer-page .content {
+    margin: 0 auto;
+    max-width: 1170px;
+    width: 100%;
+}
+
+.footer-page .heading {
+    font-size: 40px;
+    font-weight: bold;
+    color: #f1f1f1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    text-transform: uppercase;
+}
+
+.footer-page .content {
+    padding: 50px 0;
+}

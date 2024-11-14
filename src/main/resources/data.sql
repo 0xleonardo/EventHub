@@ -45,27 +45,8 @@ INSERT INTO event (id, user_id, name, image, description, priority, datetime_fro
                    location_id, status)
 VALUES ('ebfdfe4c-5bfa-4f34-b860-9b3b5d38ac57', '89e85f2d-2b2b-4a0a-8b58-5d62225e8a98', 'Summer Music Festival',
         'https://iili.io/HZxeXuR.jpg',
-        'The Summer Music Festival is back again!
-    Get ready to enjoy three days of non-stop music, fun, and sunshine.
-
-    Line Up:
-    - The Cool Cats: An indie rock band with a unique sound and a legion of followers.
-    - DJ Spins: Known for energetic sets that will keep you dancing all night long.
-    - And many more talented local and international artists!
-
-    What''s More?
-    Along with great music, we''re hosting a variety of food and drink stalls.
-    From local delicacies to international cuisines, there''s something for everyone.
-
-    Also, don''t forget to check out the arts and crafts stalls, games, and other fun activities.
-
-    We can''t wait to see you there!
-    It''s more than just a festival - it''s a celebration of music, culture, and summer fun.
-
-    Date: August 12-14, 2023
-    Location: Central Park, New York
-
-    Bring your friends, bring your energy, and most importantly, bring your love for music!', 1,
+        '<h3>The Summer Music Festival is back again!&nbsp;</h3><p>Get ready to enjoy three days of non-stop music, fun, and sunshine.&nbsp;</p><p>&nbsp;</p><p><strong>Line Up:&nbsp;</strong></p><p>- The Cool Cats: An indie rock band with a unique sound and a legion of followers.&nbsp;</p><p>- DJ Spins: Known for energetic sets that will keep you dancing all night long.&nbsp;</p><p>- And many more talented local and international artists!&nbsp;</p><p>&nbsp;</p><p><strong>What''s More?&nbsp;</strong></p><p>Along with great music, we''re hosting a variety of food and drink stalls.&nbsp;</p><p>&nbsp;</p><p>From local delicacies to international cuisines, there''s something for everyone.&nbsp;</p><p>Also, don''t forget to check out the arts and crafts stalls, games, and other fun activities.</p><p>&nbsp;</p><p><strong>We can''t wait to see you there!&nbsp;</strong></p><p>It''s more than just a festival - it''s a celebration of music, culture, and summer fun.&nbsp;</p><p>&nbsp;</p><p><strong>Date:</strong> August 12-14, 2023&nbsp;</p><p><strong>Location:</strong> Central Park, New York&nbsp;</p><p>&nbsp;</p><p>Bring your friends, bring your energy, and most importantly, bring your love for music!</p>',
+        1,
         '2025-08-14 15:00:00', '2025-08-14 19:00:00', 1, 'd30dd879-f8a2-4a68-995e-08db6b3f75a8', 'ACTIVE');
 
 INSERT INTO transaction(id, user_id, amount_paid, event_id, payment_status, timestamp)

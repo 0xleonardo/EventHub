@@ -1,0 +1,34 @@
+.eventtype-card-overlay {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    color: white;
+    transition: color 0.2s linear;
+}
+
+.eventtype-card-overlay > .eventtype-card-image {
+    width: 250px;
+    height: 150px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 16px;
+    transition: all 0.5s linear;
+}
+
+.eventtype-card-overlay > .eventtype-card-image:hover {
+    border: 1px solid #2575fc;
+}
+
+.eventtype-card-overlay > .eventtype-card-name {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.eventtype-card-overlay:hover {
+    color: #006edb;
+    cursor: pointer;
+}

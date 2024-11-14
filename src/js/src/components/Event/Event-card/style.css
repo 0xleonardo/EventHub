@@ -1,0 +1,73 @@
+.event-card-overlay {
+    max-width: 350px;
+    height: 550px;
+    border-radius: 25px;
+    width: 100%;
+    background-color: #f1f1f1;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #00192f;
+    transition: transform 0.3s ease-in-out;
+}
+
+
+.event-card-overlay:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
+}
+
+
+.event-card-overlay:hover {
+    color: #006edb;
+    cursor: pointer;
+}
+
+.event-card-overlay > .event-card-image {
+    width: 100%;
+    max-height: 60%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: transform 0.3s ease-in-out;
+}
+
+.event-card-overlay:hover .event-card-image {
+    transform: scale(1.05);
+}
+
+.event-card-overlay > .event-card-description {
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    justify-content: center;
+    max-height: 40%;
+    height: 100%;
+}
+
+.event-card-description > .event-card-date {
+    font-size: 15px;
+    color: #ef4136;
+}
+
+.event-card-description > .event-card-name {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.event-card-description > .event-card-address {
+    font-size: 15px;
+    color: black;
+}
+
+.event-card-description > .event-card-type {
+    font-size: 15px;
+    color: white;
+    background-color: #006edb;
+    display: flex;
+    justify-content: center;
+    padding: 5px 10px;
+    border-radius: 10px;
+}

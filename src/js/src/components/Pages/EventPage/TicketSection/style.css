@@ -1,0 +1,50 @@
+.tickets-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+}
+
+.ticket-row {
+    display: flex;
+    width: 100%;
+    background-color: #f1f1f1;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    border-radius: 25px;
+    flex: 1;
+    transition: transform 0.3s ease;
+}
+
+.ticket-row:hover {
+    transform: scale(1.05); /* 120% of the original size */
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2); /* add shadow for "pop up" effect */
+}
+
+.ticket-row div {
+    display: flex;
+    align-items: center;
+    gap: 10px
+}
+
+.ticket-row div span {
+    color: #6a11cb;
+    font-size: 20px;
+}
+
+.ticket-row .ticket-row-info {
+    display: flex;
+    justify-content: space-between;
+    flex: 5;
+}
+
+.ticket-row .ticket-row-info > div {
+    flex: 1;
+}
+
+.ticket-row .ticket-row-button {
+    display: flex;
+    justify-content: flex-end;
+    flex: 1;
+}

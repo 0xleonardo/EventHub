@@ -1,0 +1,75 @@
+.browse {
+    min-height: 120vh;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    background-color: #f1f1f1;
+}
+
+.browse .section-one {
+    min-height: 40vh;
+    background-image: url("/src/assets/pattern.png");
+    background-size: cover;
+    background-repeat: repeat;
+    display: flex;
+    background-color: #00192f;
+}
+
+.browse .browse-container, .browse .heading {
+    margin: 0 auto;
+    max-width: 1170px;
+    width: 100%;
+}
+
+.browse-container {
+    display: flex;
+    flex-direction: column;
+    padding: 50px 0;
+    width: 100%;
+}
+
+.browse-container .search-section {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    gap: 5px;
+    justify-content: flex-start;
+}
+
+.browse-container .search-section > div {
+    display: flex;
+    flex-direction: column;
+}
+
+.browse .heading {
+    font-size: 40px;
+    font-weight: bold;
+    color: #f1f1f1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    text-transform: uppercase;
+}
+
+.browse-container .event-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 35px;
+    padding: 20px 0;
+}
+
+.browse-container .pagination-buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.browse-container .search-button {
+    padding: 15px;
+}
+
+@media (max-width: 992px) {
+    .browse-container .event-list {
+        justify-content: center;
+    }
+}

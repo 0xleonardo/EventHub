@@ -1,0 +1,47 @@
+.event-page-wrapper .brand-name {
+    font-size: 60px;
+    font-weight: bold;
+}
+
+.event-page-wrapper .brand-name > span {
+    color: #ef4136;
+    font-size: 60px;
+    font-weight: bold;
+}
+
+.event-page-wrapper .modal-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+}
+
+.event-page-wrapper .event-to-book div {
+    font-size: 20px;
+}
+
+.event-page-wrapper .event-to-book div span {
+    font-weight: bold;
+}
+
+.event-page-wrapper .ticket-buy-info {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.event-page-wrapper .ticket-buy-info > * {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.event-page-wrapper .ticket-buy-info > div span {
+    font-weight: bold;
+}
+
+.event-page-wrapper .modal-buttons {
+    display: flex;
+    justify-content: space-between;
+}

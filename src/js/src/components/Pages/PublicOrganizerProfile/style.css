@@ -1,0 +1,171 @@
+.public-organizer-profile-page {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    background-color: #f1f1f1;
+}
+
+.public-organizer-profile-page .section-one {
+    min-height: 40vh;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    background-color: #00192f;
+}
+
+.public-organizer-profile-page .heading, .user-info, .events-section {
+    margin: 0 auto;
+    max-width: 1170px;
+    width: 100%;
+}
+
+.public-organizer-profile-page .heading {
+    font-size: 40px;
+    font-weight: bold;
+    color: #f1f1f1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.section-one .heading div {
+    background-color: #00192f;
+    padding: 20px;
+    border-radius: 25px 25px 0 0;
+}
+
+.public-organizer-profile-page .user-info {
+    padding: 50px 0;
+}
+
+/*------------------------------------------------------------*/
+
+.section-two {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    padding: 0 0 50px 0;
+}
+
+.section-two .contact-mail {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.section-two .about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.section-two .about pre {
+    max-width: 1170px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+.section-two .about .about-heading {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+
+/*------------------------------------------------------------*/
+
+.public-organizer-profile-page .section-three {
+    background-color: #00192f;
+    padding: 50px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+
+.public-organizer-profile-page .events-section {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    width: 100%;
+}
+
+.public-organizer-profile-page .events-section .event-buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.public-organizer-profile-page .events {
+    display: flex;
+    gap: 50px;
+    width: 100%;
+}
+
+.public-organizer-profile-page .events > * {
+    flex: 1;
+    width: 100%;
+}
+
+.public-organizer-profile-page .no-events {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    max-width: 1770px;
+    margin: 0 auto;
+}
+
+.public-organizer-profile-page .tickets-in-modal {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    padding: 25px;
+}
+
+.user-tickets-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+}
+
+.user-ticket-row {
+    display: flex;
+    width: 100%;
+    background-color: #f1f1f1;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    border-radius: 25px;
+    flex: 1;
+    transition: transform 0.3s ease;
+}
+
+.user-ticket-row:hover {
+    transform: scale(1.05); /* 120% of the original size */
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2); /* add shadow for "pop up" effect */
+}
+
+.user-ticket-row div {
+    display: flex;
+    align-items: center;
+    gap: 30px
+}
+
+.user-ticket-row div span {
+    color: #6a11cb;
+    font-size: 16px;
+}
+
+.user-ticket-row .ticket-row-info {
+    display: flex;
+    justify-content: space-between;
+    flex: 5;
+}
+
+.user-ticket-row .ticket-row-info > div {
+    flex: 1;
+}

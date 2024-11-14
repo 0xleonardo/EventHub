@@ -21,6 +21,8 @@ DreamTeam
 - Spring Boot
 - H2 Database
 - Swagger
+- React (Typescript)
+- Cypress
 
 ## Requirements
 
@@ -30,7 +32,7 @@ Minimal JDK
 Java JDK 23
 ```
 
-## Usage
+## Usage Backend
 
 Backend service (API) can be started by starting Application.java and will be available on:
 
@@ -38,10 +40,30 @@ Backend service (API) can be started by starting Application.java and will be av
 localhost:8080
 ```
 
-### API Documentation
+## API Documentation
 
 API documentation was automatically generated using Swagger.io and it is available at:
 
 ```
 localhost:8080/swagger-ui/index.html#/
+```
+
+## Usage Frontend
+
+### React App
+
+Locate yourself in /src/js
+
+```
+npm install
+npm run start
+```
+
+### Image upload proxy
+
+Locate yourself in /src/js/proxy
+
+```
+npm install
+node server.mjs
 ```

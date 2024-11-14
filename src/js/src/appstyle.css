@@ -1,0 +1,18 @@
+.shopBody {
+    background-color: #00192f;
+}
+
+.verticalHr {
+    border-left: 1px solid black;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
+
+* {
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.error-input {
+    border: 1px solid red;
+}

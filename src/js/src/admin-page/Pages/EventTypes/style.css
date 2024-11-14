@@ -1,0 +1,30 @@
+.admin-event-types {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 50px;
+    background-color: #f1f1f1;
+}
+
+.admin-event-types-heading {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 20px;
+}
+
+.admin-event-types-container {
+    margin: 0 auto;
+    max-width: 1170px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.event-type-row {
+
+}
+
+.event-type-row img {
+    max-width: 250px;
+}

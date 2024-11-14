@@ -1,0 +1,155 @@
+.user-profile-page {
+    min-height: 120vh;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    background-color: #f1f1f1;
+}
+
+.user-profile-page .section-one {
+    min-height: 40vh;
+    background-image: url("/src/assets/pattern.png");
+    background-size: cover;
+    background-repeat: repeat;
+    padding-bottom: 25px;
+    display: flex;
+    background-color: #00192f;
+}
+
+.user-profile-page .heading, .user-info, .events-section {
+    margin: 0 auto;
+    max-width: 1170px;
+    width: 100%;
+}
+
+.user-profile-page .heading {
+    font-size: 40px;
+    font-weight: bold;
+    color: #f1f1f1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    text-transform: uppercase;
+}
+
+.user-profile-page .subheading {
+    font-size: 20px;
+    font-weight: bold;
+    color: #2575fc;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    text-transform: uppercase;
+}
+
+.user-profile-page .user-info {
+    padding: 50px 0;
+}
+
+.user-info form {
+    display: flex;;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/*------------------------------------------------------------*/
+
+.user-profile-page .section-three {
+    background-color: #00192f;
+    padding: 50px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+
+.user-profile-page .section-three .section-three-search {
+    display: flex;
+    margin: 0 auto;
+    max-width: 1170px;
+    width: 100%;
+    gap: 25px;
+    align-items: flex-end;
+}
+
+.user-profile-page .section-three .section-three-search > * {
+    display: flex;
+    flex-direction: column;
+}
+
+.user-profile-page .events-section {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    width: 100%;
+}
+
+.user-profile-page .events-section .event-buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.user-profile-page .events {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 35px;
+    width: 100%;
+}
+
+.user-profile-page .events > * {
+    flex: 1;
+    width: 100%;
+}
+
+
+.user-profile-page .tickets-in-modal {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    padding: 25px;
+}
+
+.user-tickets-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+}
+
+.user-ticket-row {
+    display: flex;
+    width: 100%;
+    background-color: #f1f1f1;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    border-radius: 25px;
+    flex: 1;
+    transition: transform 0.3s ease;
+}
+
+.user-ticket-row:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.user-ticket-row div {
+    display: flex;
+    align-items: center;
+    gap: 30px
+}
+
+.user-ticket-row div span {
+    color: #6a11cb;
+    font-size: 16px;
+}
+
+.user-ticket-row .ticket-row-info {
+    display: flex;
+    justify-content: space-between;
+    flex: 5;
+}
+
+.user-ticket-row .ticket-row-info > div {
+    flex: 1;
+}

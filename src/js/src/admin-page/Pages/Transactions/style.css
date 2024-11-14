@@ -1,0 +1,35 @@
+.admin-events {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 50px;
+    background-color: #f1f1f1;
+}
+
+.admin-events-heading {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 20px;
+}
+
+.admin-events-container {
+    margin: 0 auto;
+    max-width: 1170px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.admin-events .search-section {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    gap: 5px;
+    justify-content: flex-start;
+}
+
+.admin-events .search-section > div {
+    display: flex;
+    flex-direction: column;
+}

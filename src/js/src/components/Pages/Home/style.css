@@ -1,0 +1,244 @@
+.home-wrapper {
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.home-wrapper .section-container, .section-container-one, .section-container-two > div {
+    margin: 0 auto;
+    max-width: 1170px;
+}
+
+.home-section-two .heading {
+    font-size: 32px;
+    font-weight: bold;
+    color: #f1f1f1;
+}
+
+.home-section-two > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 75px 0;
+    gap: 75px;
+}
+
+/* ========= Section 1 ========= */
+.home-section-one {
+    background-image: url(/src/assets/slider/banner1.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: 120vh;
+    display: flex;
+}
+
+.home-section-one > .section-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+}
+
+.home-section-one > .section-container > .name {
+    font-size: 60px;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.home-section-one > .section-container > .name > span {
+    color: #ef4136;
+    font-size: 60px;
+    font-weight: bold;
+}
+
+.home-section-one > .section-container > .message {
+    font-size: 30px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* ========= Section 2 ========= */
+.home-section-two {
+    display: flex;
+    flex-direction: column;
+}
+
+.home-section-two .section-container-one {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 35px;
+    justify-content: center;
+}
+
+.home-section-two .section-container-two {
+    min-height: 80vh;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 100px 0;
+    background-image: url(/src/assets/pattern.png);
+    background-size: cover;
+    background-repeat: repeat;
+    gap: 55px;
+}
+
+.home-wrapper .section-container-two > .section-container-types {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 55px;
+}
+
+.home-wrapper .section-container-two > .section-container-heading {
+    font-size: 30px;
+    color: white;
+    font-weight: bold;
+}
+
+/* ========= Section 3 ========= */
+.home-section-three {
+    background-color: #f1f1f1;
+    min-height: 60vh;
+    display: flex;
+    flex-wrap: wrap;
+    color: #00192f;
+}
+
+.home-section-three > .section-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 60px;
+    padding: 50px 0;
+}
+
+.home-section-three > .section-container > .message {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.home-section-three > .section-container > .message > div {
+    font-size: 20px;
+}
+
+.home-section-three > .section-container > .message > span {
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.home-section-three > .section-container > .steps {
+    display: flex;
+    gap: 35px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-section-three > .section-container > .steps > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 350px;
+    gap: 15px;
+}
+
+.home-section-three > .section-container > .steps > div > i {
+    font-size: 60px;
+}
+
+.home-section-three > .section-container > .steps > div > span {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.home-section-three > .section-container > .steps > div > div {
+    font-size: 15px;
+    text-align: center;
+}
+
+/* ========= Section 5 ========= */
+.home-section-four {
+    background-color: #00192f;
+    min-height: 60vh;
+    display: flex;
+    flex-wrap: wrap;
+    color: #f1f1f1;
+    background-image: url(/src/assets/pattern.png);
+    background-size: cover;
+    background-repeat: repeat;
+}
+
+.home-section-four > .section-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 60px;
+    padding: 50px 0;
+}
+
+.home-section-four > .section-container > .message {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.home-section-four > .section-container > .message > div {
+    font-size: 20px;
+}
+
+.home-section-four > .section-container > .message > span {
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.home-section-four > .section-container > .steps {
+    display: flex;
+    gap: 35px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-section-four > .section-container > .steps > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 350px;
+    gap: 15px;
+}
+
+.home-section-four > .section-container > .steps > div > i {
+    font-size: 60px;
+}
+
+.home-section-four > .section-container > .steps > div > span {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.home-section-four > .section-container > .steps > div > div {
+    font-size: 15px;
+    text-align: center;
+}
+
+@media (max-width: 992px) {
+    .home-section-one > .section-container {
+        padding: 15px;
+    }
+}

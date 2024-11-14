@@ -1,0 +1,95 @@
+.create-event {
+    background-color: #f1f1f1;
+}
+
+.create-event .create-event-container {
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 50px 0;
+}
+
+.create-event .info-section {
+    margin: 0 auto;
+    max-width: 1170px;
+    width: 100%;
+}
+
+.create-event .info {
+    min-height: 40vh;
+    background-image: url("/src/assets/pattern.png");
+    background-size: cover;
+    background-repeat: repeat;
+    padding-bottom: 25px;
+    display: flex;
+    align-items: flex-end;
+    background-color: #00192f;
+}
+
+.create-event .heading {
+    font-size: 40px;
+    font-weight: bold;
+    color: #f1f1f1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    text-transform: uppercase;
+}
+
+.create-event .step {
+    font-size: 20px;
+    font-weight: bold;
+    color: #ef4136;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    text-transform: uppercase;
+}
+
+.create-event .create-event-step-one, .create-event-step-two {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.create-event .create-event-step-one .dates {
+    display: flex
+}
+
+.create-event .create-event-step-one .dates {
+    display: flex
+}
+
+.create-event .create-event-container .buttons {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.create-event .create-event-step-two .event-ticket-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.create-event .create-event-step-two .event-ticket {
+    display: flex;
+    gap: 25px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+    border-radius: 25px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.create-event .create-event-step-two .event-ticket label {
+    color: #f1f1f1;
+}
+
+.create-event .create-event-step-two .buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.create-event .end-step-buttons {
+    display: flex;
+    justify-content: space-between;
+}
