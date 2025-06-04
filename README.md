@@ -7,12 +7,9 @@ centralized platform connecting organizers and enthusiasts alike. The primary go
 users with seamless access to a wide array of events while offering organizers a digital toolkit and promotional
 partner.
 
-## Authors
-
-DreamTeam
+## Author
 
 - Leonardo Štavalj-Ladišić
-- Patrik Horvat
 
 ## Technologies used
 
